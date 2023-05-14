@@ -1,8 +1,7 @@
 # PHP 7 docker environement with alpine, nginx, php7
 
 # Alpine base
-FROM alpine:latest
-MAINTAINER Olivier Blunt <contact@blunt.sh>
+FROM alpine:3.15
 
 # Application file directory
 ONBUILD ARG APP_DIR=/app

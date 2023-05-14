@@ -1,6 +1,6 @@
-# blunt1337/nginx-php7
+# hellifiknow/nginx-php7
 
-[![](https://images.microbadger.com/badges/image/blunt1337/nginx-php7.svg)](https://microbadger.com/images/blunt1337/nginx-php7)
+[![](https://images.microbadger.com/badges/image/hellifiknow/nginx-php7.svg)](https://microbadger.com/images/hellifiknow/nginx-php7)
 
 This is a [Docker image](https://www.docker.com/) to use as a web server with Nginx and PHP 7.1.  
 Nginx and PHP are both preconfigured and ready to handle your connections.
@@ -16,7 +16,7 @@ PHP includes the following modules:
 * openssl
 
 ## Simple usage
-Just start it with `docker run -d -p 80:80 -v .:/app blunt1337/nginx-php7 ` to use the current path as webroot.
+Just start it with `docker run -d -p 80:80 -v .:/app hellifiknow/nginx-php7` to use the current path as webroot.
 
 ## I want to add rules in the nginx configuration
 Following folders include *.conf files automatically:
@@ -41,10 +41,10 @@ server {
 then add in your Dockerfile `COPY my_custom.conf /etc/nginx/servers/default.conf`.
 
 ## More custom usage
-To extends the image, use the onbuild version that runs the install files in the extended image. E.g. the sample project [nginx-php7-laravel](https://github.com/blunt1337/docker-alpine-nginx-php7-laravel).  
+To extends the image, use the onbuild version that runs the install files in the extended image. E.g. the sample project [nginx-php7-laravel](https://github.com/hellifiknow/docker-alpine-nginx-php7-laravel).  
 A minimalistic Dockerfile to change the STATIC_DIR would be:
 ```dockerfile
-FROM blunt1337/nginx-php7:onbuild
+FROM hellifiknow/nginx-php7:onbuild
 ARG STATIC_DIR=public
 RUN /bin/sh /install/install.sh
 ```
