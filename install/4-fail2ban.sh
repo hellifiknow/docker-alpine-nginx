@@ -15,7 +15,7 @@ apk add --update nginx-mod-http-lua
 
 #######################################################
 # Create scripts
-mkdir /etc/nginx/fail2ban
+mkdir -p /etc/nginx/fail2ban
 
 # Init script
 echo "lua_shared_dict blacklist 10m;
