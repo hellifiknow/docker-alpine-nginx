@@ -15,7 +15,7 @@ apk add --update nginx-mod-http-geoip
 
 # Geo ip database
 oldpath=$(pwd)
-mkdir /etc/geoip
+mkdir -p /etc/geoip
 cd /etc/geoip
 wget -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
 gunzip GeoIP.dat.gz

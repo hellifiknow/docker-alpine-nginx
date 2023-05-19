@@ -202,6 +202,6 @@ fi
 sed -i -r 's/(fastcgi_param\s+SERVER_SOFTWARE\s+).*;/\1blunt.sh;/g' /etc/nginx/fastcgi.conf
 
 # Nginx pid file
-mkdir /run/nginx
+mkdir -p /run/nginx
 chown $USER:$USER /run/nginx
 chmod 770 /run/nginx
